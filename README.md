@@ -30,3 +30,27 @@ following, but replace `/dev/sdc` with the path to the SDCard.
 
 Insert the SDCard into a Raspberry Pi Model B, and watch it boot over the serial
 port. Log in as...
+
+## Running in qemu
+
+It's possible to do a lot of work locally in qemu. Run the following to make a
+qemu build:
+
+    $ make clean
+    $ make tilde_qemu_defconfig
+    $ make
+
+Then, start up qemu:
+
+    $ qemu-system-arm -M vexpress-a9 -kernel buildroot/output/images/zImage
+-drive file=buildroot/output/images/rootfs.ext2,if=sd -append
+"console=ttyAMA0,115200 root=/dev/mmcblk0" -serial telnet:localhost:4444,server
+-net nic,model=lan9118 -net user -nographic
+
+Now that qemu is started, it's waiting for you to connect to the serial port.
+This is accessible by telneting to port 4444. I.e.
+
+    $ telnet localhost 4444
+
+Log in as root:root or fhunleth:fhunleth, etc. for now.
+
