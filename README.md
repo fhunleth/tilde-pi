@@ -42,10 +42,11 @@ qemu build:
 
 Then, start up qemu:
 
-    $ qemu-system-arm -M vexpress-a9 -kernel buildroot/output/images/zImage
--drive file=buildroot/output/images/rootfs.ext2,if=sd -append
-"console=ttyAMA0,115200 root=/dev/mmcblk0" -serial telnet:localhost:4444,server
--net nic,model=lan9118 -net user -nographic
+    $ qemu-system-arm -M vexpress-a9 -kernel buildroot/output/images/zImage \
+              -drive file=buildroot/output/images/rootfs.ext2,if=sd \
+              -append "console=ttyAMA0,115200 root=/dev/mmcblk0" \
+              -serial telnet:localhost:4444,server \
+              -net nic,model=lan9118 -net user -nographic
 
 Now that qemu is started, it's waiting for you to connect to the serial port.
 This is accessible by telneting to port 4444. I.e.

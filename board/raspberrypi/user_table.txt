@@ -1,6 +1,2 @@
-# These users are added for convenient. The final image should
-# not contain our names.
-
-# username uid group gid password home_dir       shell   groups comment
 fhunleth -1 fhunleth -1 =fhunleth /home/fhunleth /bin/sh wheel Frank Hunleth
 hestrada -1 hestrada -1 =hestrada /home/hestrada /bin/sh wheel Hugo Estrada
