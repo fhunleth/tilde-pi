@@ -1,0 +1,10 @@
+config BR2_PACKAGE_COWSAY
+	bool "cowsay"
+	depends on BR2_PACKAGE_PERL # runtime
+	help
+	  cowsay is a configurable talking cow, written in Perl.
+
+	  https://github.com/schacon/cowsay
+
+comment "cowsay needs perl"
+	depends on !BR2_PACKAGE_PERL

@@ -1,3 +1,4 @@
+source "$BR2_EXTERNAL/package/cowsay/Config.in"
 source "$BR2_EXTERNAL/package/figlet/Config.in"
 source "$BR2_EXTERNAL/package/fwup/Config.in"
 source "$BR2_EXTERNAL/package/fwup/Config.in.host"
