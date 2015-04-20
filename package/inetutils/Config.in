@@ -1,0 +1,20 @@
+config BR2_PACKAGE_INETUTILS
+	bool "inetutils"
+	help
+	  GNU lightning is a library that generates
+	  assembly language code at run-time.
+
+	  https://www.gnu.org/software/inetutils/
+
+if BR2_PACKAGE_INETUTILS
+
+config BR2_PACKAGE_LIGHTNING_DISASSEMBLER
+	bool "enable disassembler"
+	select BR2_PACKAGE_BINUTILS
+	select BR2_PACKAGE_ZLIB
+	depends on !BR2_aarch64 && !BR2_nios2 # binutils
+	depends on BR2_USE_WCHAR # binutils
+	help
+	  Enable the GNU lightning disassembler.
+
+endif
