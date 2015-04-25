@@ -1,2 +1,2 @@
-fhunleth -1 fhunleth -1 =fhunleth /home/fhunleth /bin/sh wheel Frank Hunleth
-hestrada -1 hestrada -1 =hestrada /home/hestrada /bin/sh wheel Hugo Estrada
+fhunleth -1 fhunleth -1 =l4CHr5QxsmLo4nvm /home/fhunleth /bin/sh wheel Frank Hunleth
+hestrada -1 hestrada -1 =kKWdACcvoCzGvN4K /home/hestrada /bin/sh wheel Hugo Estrada

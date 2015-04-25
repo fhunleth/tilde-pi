@@ -1,6 +1,14 @@
 #!/bin/sh
 
 TARGETDIR=$1
+IMAGESDIR=$TARGETDIR/../images
+HOSTDIR=$TARGETDIR/../host
+
+# Process the kernel if using device tree
+if [ -e $HOSTDIR/usr/bin/mkknlimg ]; then
+        $HOSTDIR/usr/bin/mkknlimg \
+                    $IMAGESDIR/zImage $IMAGESDIR/zImage.mkknlimg
+fi
 
 # Clean up the cowsay cows
 find $TARGETDIR/usr/share/cows -name "*.cow" | \
